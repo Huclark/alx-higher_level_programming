@@ -8,7 +8,9 @@
 	- [Python Scripts](#python-scripts)
 	- [Shell Scripts](#shell-scripts)
 	- [C Scripts](#c-scripts)
-This project introduced me to the `Python` programming language. It involves a bit of `C` as well and focuses more on implementing simple `Python` related tasks using `Shell Scripts` and `Python Scripts`.
+
+## About
+This project introduced me to the `Python` programming language. It involves a bit of `C` and focuses more on implementing simple `Python` related tasks using `Shell Scripts` and `Python Scripts`.
 
 ## Objectives
 At the end of this project I am expected to explain to anyone, without the help of Google:
