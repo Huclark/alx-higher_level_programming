@@ -5,9 +5,9 @@
 - [About](#about)
 - [Objective](#objective)
 - [Requirements](#requirements)
-- [Features](#features)
-
-## About
+	- [Python Scripts](#python-scripts)
+	- [Shell Scripts](#shell-scripts)
+	- [C Scripts](#c-scripts)
 This project introduced me to the `Python` programming language. It involves a bit of `C` as well and focuses more on implementing simple `Python` related tasks using `Shell Scripts` and `Python Scripts`.
 
 ## Objectives
@@ -52,9 +52,3 @@ At the end of this project I am expected to explain to anyone, without the help 
 - The prototypes of all your functions should be included in your header file called `lists.h`
 - Don’t forget to push your header file
 - All your header files should be include guarded
-
-## Features
-### List of concepts covered
-| File                | Tasks                                                                                     |
-| ------------------- | ----------------------------------------------------------------------------------------- |
-| `0-run`             | Write a Shell script that runs a Python script. The Python file name will be saved in the environment variable `$PYFILE`|
