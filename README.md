@@ -11,8 +11,8 @@ This repository covers the sprint 2 of the ALX SE programme. In sprint 2, I am d
 
 ## Objectives
 By the end of sprint 2, I should have:
-- have a deeper understanding of `C` and `Linux`.
-- obtain a stronghold of `Python`,`SQL`, `Systems Engineering` and `Web Development`.
+- a deeper understanding of `C` and `Linux`.
+- obtained a stronghold of `Python`,`SQL`, `Systems Engineering` and `Web Development`.
 
 ## Features
 ### List of concepts covered
