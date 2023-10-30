@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def magic_calculation(a, b):
     const_number = 98  # LOAD_CONST 1 (98)
     const_number = const_number ** a  # LOAD_FAST 0 (a) | BINARY_POWER
