@@ -12,4 +12,4 @@ def uppercase(str):
         else:
             output += character  # if uppercase, concatenate
 
-    print(output)
+    print("{}".format(output))
