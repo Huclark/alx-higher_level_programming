@@ -9,7 +9,7 @@
  */
 listint_t *insert_node(listint_t **head, int number)
 {
-	listint_t *current = *head, *prev, *new;
+	listint_t *current = *head, *new;
 
 	new = malloc(sizeof(listint_t)); /* allocate memory */
 
@@ -18,10 +18,9 @@ listint_t *insert_node(listint_t **head, int number)
 	
 	/* initialize new node and point it to NULL */
 	new->n = number; 
-	new->next = NULL;
 
 	/* check if list is empty */
-	if (*head == NULL)
+	if (*head == NULL || current->n >= number)
 	{
 		new->next = *head;
 		*head = new;
@@ -29,14 +28,11 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 
 	/* traverse list to find first instance of number < n */
-	while (current != NULL && current->n <= number)
-	{
-		prev = current;
+	while (current && current->n <= number && current->next)
 		current = current->next;
-	}
 
-	new->next = current; /* point to next node or NULL */
-	prev->next = new; /* link previous node to new node  */
+	new->next = current->next; /* point to next node or NULL */
+	current->next = new; /* link previous node to new node  */
 
 	return (new);
 }
