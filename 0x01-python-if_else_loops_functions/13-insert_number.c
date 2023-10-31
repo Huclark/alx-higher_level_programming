@@ -20,7 +20,7 @@ listint_t *insert_node(listint_t **head, int number)
 	new->n = number; 
 	new->next = NULL;
 
-	/* check if */
+	/* check if list is empty */
 	if (*head == NULL)
 	{
 		new->next = *head;
@@ -28,14 +28,15 @@ listint_t *insert_node(listint_t **head, int number)
 		return (new);
 	}
 
-	while (current != NULL && current->n < number)
+	/* traverse list to find first instance of number < n */
+	while (current != NULL && current->n <= number)
 	{
 		prev = current;
 		current = current->next;
 	}
 
-	new->next = current;
-	prev->next = new;
+	new->next = current; /* point to next node or NULL */
+	prev->next = new; /* link previous node to new node  */
 
 	return (new);
 }
