@@ -1,9 +1,5 @@
 #!/usr/bin/python3
 
-"""Imports all functions from the file calculator_1.py
-and handles basic operations.
-Usage: ./100-my_calculator.py a operator b
-"""
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     from sys import argv
