@@ -12,5 +12,4 @@ b = 2
 
 ''' print result using string format while passing add(a,b) as an
 argument to print the result '''
-if __name__ == "__main__":
-    print("{} + {} = {}".format(a, b, add(a, b)))
+print("{} + {} = {}".format(int(a), int(b), add(a, b)))
