@@ -4,10 +4,6 @@
    and prints its value
 """
 if __name__ == "__main__":
-    import variable_load_5
+    from variable_load_5 import a
 
-    names_defined = dir(variable_load_5)
-
-    if "a" in names_defined:
-        a = getattr(variable_load_5, "a")
-        print(a)
+    print(a)
