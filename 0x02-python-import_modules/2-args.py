@@ -4,9 +4,9 @@
 
 if __name__ == "__main__":
 
-    from sys import argv
+    import sys
 
-    argc = len(argv)
+    argc = len(sys.argv)
 
     if argc == 2:
         print("{} argument:".format(argc - 1))
@@ -15,4 +15,4 @@ if __name__ == "__main__":
 
     if argc > 1:
         for i in range(1, argc):
-            print("{}: {}".format(i, argv[i]))
+            print("{}: {}".format(i, sys.argv[i]))
