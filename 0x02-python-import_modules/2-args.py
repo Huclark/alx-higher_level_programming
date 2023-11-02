@@ -7,10 +7,10 @@ if __name__ == "__main__":
     argument_count = len(sys.argv)
 
     if argument_count == 1:
-        print("{} arguments.".formmat(argument_count - 1))
+        print("0 arguments.")
 
     elif argument_count == 2:
-        print("{} argument:".format(argument_count - 1))
+        print("1 argument:")
 
     else:
         print("{} arguments:".format(argument_count - 1))
