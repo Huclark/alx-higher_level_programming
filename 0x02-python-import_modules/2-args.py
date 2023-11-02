@@ -2,9 +2,9 @@
 
 """Prints the number of and the list of its arguments"""
 
-from sys import argv
-
 if __name__ == "__main__":
+
+    from sys import argv
 
     argc = len(argv)
 
