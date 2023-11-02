@@ -2,7 +2,6 @@
 
 """Imports all functions from the file calculator_1.py
 and handles basic operations.
-
 Usage: ./100-my_calculator.py a operator b
 """
 if __name__ == "__main__":
