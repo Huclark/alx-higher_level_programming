@@ -20,7 +20,7 @@ At the end of this project I am expected to explain to anyone, without the help 
 - How to use command line arguments with your Python programs
 
 ## Requirements
-- **Allowed editors**: `vi`, `vim`, `emacs`
+- **Allowed editors**: `vi`, `vim`, `emacs`.
 - **Interpretation/Compilation Environment**: Ubuntu 20.04 LTS using python3 (version 3.8.5)
 - **New Line Requirement**: All your files should end with a new line
 - **Shebang Line Requirement**: The first line of all your files should be exactly `#!/usr/bin/python3`
