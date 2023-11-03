@@ -7,7 +7,7 @@
 - [Requirements](#requirements)
 
 ## About
-In this project, I dive deeper into `Python`, by solving tasks relating to `import` and `modules`
+In this project, I dive deeper into `Python`, by solving tasks relating to `import` and `modules`.
 
 ## Objectives
 At the end of this project I am expected to explain to anyone, without the help of Google:
