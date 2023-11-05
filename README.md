@@ -18,4 +18,4 @@ By the end of sprint 2, I should have:
 ### List of concepts covered
 | Language            | Concepts                                                                                  |
 | ------------------- | ----------------------------------------------------------------------------------------- |
-| `Python`            | - Hello World<br> - If, Else and Functions<br> - Import Modules                           |
+| `Python`            | - Hello World<br> - If, Else and Functions<br> - Import Modules<br> - Data Structures: Lists, Tuples |
