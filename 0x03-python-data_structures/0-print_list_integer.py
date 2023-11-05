@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Prints all integers of a list
+print_list_integer - Prints all integers of a list
 """
 
 
