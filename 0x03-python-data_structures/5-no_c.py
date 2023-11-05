@@ -11,7 +11,7 @@ def no_c(my_string):
 
     new_str = ""
 
-    for letter in my_string:
+    for i in range(len(my_string):
         if letter not in "Cc":
             new_str += letter
 
