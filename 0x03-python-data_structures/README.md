@@ -9,17 +9,22 @@
 	- [C](#c)
 
 ## About
-In this project, I dive deeper into `Python`, by solving tasks relating to `import` and `modules`.
+Here, I learn about Data Structures (Lists & Tuples) in Python.
 
 ## Objectives
 At the end of this project I am expected to explain to anyone, without the help of Google:
-- Why Python programming is awesome
-- How to import functions from another file
-- How to use imported functions
-- How to create a module
-- How to use the built-in function `dir()`
-- How to prevent code in your script from being executed when imported
-- How to use command line arguments with your Python programs
+- Why Python Programming is Awesome
+- What are Lists and How to Use Them
+- Differences and Similarities Between Strings and Lists
+- Common Methods of Lists and How to Use Them
+- Using Lists as Stacks and Queues
+- What are List Comprehensions and How to Use Them
+- What are Tuples and How to Use Them
+- When to Use Tuples Versus Lists
+- What is a Sequence
+- Tuple Packing
+- Sequence Unpacking
+- The `del` Statement and How to Use It
 
 ## Requirements
 ##### Python Scripts
