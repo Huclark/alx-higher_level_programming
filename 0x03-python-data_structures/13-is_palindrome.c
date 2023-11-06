@@ -1,53 +1,69 @@
 #include "lists.h"
 
 /**
- * is_palindrome - Checks if a singly linked list is a palindrome
- * @head: Pointer to pointer of first node of listint_t list
- * Return: 0 if it is not a palindrome, 1 if otherwise
- */
-int is_palindrome(listint_t **head)
-{
-	listint_t *slow = *head, *fast = *head, *half2 = NULL;
-
-	if (slow != NULL && slow->next != NULL)
-	{
-		while (fast != NULL && fast->next != NULL)
-		{
-			fast = fast->next->next;
-			slow = slow->next;
-		}
-		if (fast != NULL)
-			slow = slow->next;
-		half2 = reverse_listint(&slow);
-		while (half2 != NULL)
-		{
-			if ((*head)->n != half2->n)
-				return (0);
-
-			*head = (*head)->next;
-			half2 = half2->next;
-		}
-	}
-	return (0);
-}
-
-
-/**
- * reverse_listint - Reverses a singly linked list
- * @head: Pointer to the head of the linked list
- * Return: Pointer to the new head of the reversed linked list
+ * reverse_listint - Reverses a singly-linked listint_t list.
+ * @head: A pointer to the starting node of the list to reverse.
+ *
+ * Return: A pointer to the head of the reversed list.
  */
 listint_t *reverse_listint(listint_t **head)
 {
-	listint_t *prev = NULL, *next = NULL;
+	listint_t *node = *head, *next, *prev = NULL;
 
-	while (*head != NULL)
+	while (node)
 	{
-		next = (*head)->next;
-		(*head)->next = prev;
-		prev = *head;
-		*head = next;
+		next = node->next;
+		node->next = prev;
+		prev = node;
+		node = next;
 	}
+
 	*head = prev;
 	return (*head);
+}
+
+/**
+ * is_palindrome - Checks if a singly linked list is a palindrome.
+ * @head: A pointer to the head of the linked list.
+ *
+ * Return: If the linked list is not a palindrome - 0.
+ *         If the linked list is a palindrome - 1.
+ */
+int is_palindrome(listint_t **head)
+{
+	listint_t *tmp, *rev, *mid;
+	size_t size = 0, i;
+
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);
+
+	tmp = *head;
+	while (tmp)
+	{
+		size++;
+		tmp = tmp->next;
+	}
+
+	tmp = *head;
+	for (i = 0; i < (size / 2) - 1; i++)
+		tmp = tmp->next;
+
+	if ((size % 2) == 0 && tmp->n != tmp->next->n)
+		return (0);
+
+	tmp = tmp->next->next;
+	rev = reverse_listint(&tmp);
+	mid = rev;
+
+	tmp = *head;
+	while (rev)
+	{
+		if (tmp->n != rev->n)
+			return (0);
+		tmp = tmp->next;
+		rev = rev->next;
+	}
+	reverse_listint(&mid);
+
+	return (1);
 }
