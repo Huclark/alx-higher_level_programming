@@ -4,7 +4,7 @@ def square_matrix_simple(matrix=[]):
     of all integers of a matrix
     """
     squared_matrix = []
-    
+
     for matrix_idx in range(len(matrix)):
         squared_list = []
 
@@ -13,5 +13,5 @@ def square_matrix_simple(matrix=[]):
             squared_list.append(list_value ** 2)
 
         squared_matrix.append(squared_list)
-    
+
     return squared_matrix
