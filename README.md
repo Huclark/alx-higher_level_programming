@@ -7,11 +7,11 @@
 - [Features](#features)
 
 ## About
-This repository covers the sprint 2 of the ALX SE programme. In sprint 2, I am diving deeper into `C`, `Linux` and starting my journey on `Python`, `SQL`, `Systems Engineering` and `Web Development`.
+This repository covers the sprint 2 of the ALX SE programme. In sprint 2, I am diving deeper into `C`, `Linux - Shell` and starting my journey on `Python`, `SQL`, `Systems Engineering` and `Web Development`.
 
 ## Objectives
 By the end of sprint 2, I should have:
-- a deeper understanding of `C` and `Linux`.
+- a deeper understanding of `C` and `Linux - Shell`.
 - obtained a stronghold of `Python`,`SQL`, `Systems Engineering` and `Web Development`.
 
 ## Features
