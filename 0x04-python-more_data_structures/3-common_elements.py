@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 def common_elements(set_1, set_2):
-    """Returns a set of common elements in two sets"""
+    """Returns a set of common elements in two sets
+    
+    set_1 is the first set
+    set_2 is the second set
+    """
     c_set = set()
 
     for item1 in set_1:
