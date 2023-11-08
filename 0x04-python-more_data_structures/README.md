@@ -32,3 +32,4 @@ At the end of this project I am expected to explain to anyone, without the help 
 - **Code Style**: Your code should use pycodestyle (version `2.8.*`)
 - **Executable Files**: All your files must be executable
 - **File Length Testing**: The length of your files will be tested using `wc`
+- **Modules**: You are not allowed to import any module unless specified otherwise in a task.
