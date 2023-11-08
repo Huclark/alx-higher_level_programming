@@ -3,7 +3,7 @@
 def number_keys(a_dictionary):
     """Returns the number of keys in a dictionary
 
-	a_dictionary is the dictionary passes to the function
+    a_dictionary is the dictionary passed to the function
     """
     no_of_keys = 0
 
