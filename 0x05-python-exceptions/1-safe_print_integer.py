@@ -7,7 +7,7 @@ def safe_print_integer(value):
     Args:
         value: Any data type
 
-    Return: True if value has been correctly printed (it means the value is an integer)
+    Return: True if value value is an integer
     Otherwise, returns False
     """
     try:
