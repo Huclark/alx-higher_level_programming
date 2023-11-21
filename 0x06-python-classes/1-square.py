@@ -4,6 +4,8 @@
 
 
 class Square:
+    """Class definition goes here
+    """
     def __init__(self, size):
         """Initialize a Square instance
 
