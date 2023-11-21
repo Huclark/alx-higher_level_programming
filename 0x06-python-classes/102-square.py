@@ -42,7 +42,7 @@ class Square:
     def __ne__(self, other):
         """
         Define the != comparison to a Square. Returns a Boolean Value
-        
+
         The __ne__ operator in Python is a method for overloading the
         default != operator, i.e to define if two objects are not equal.
         It returns True if the objects are not equal, and False if otherwise.
