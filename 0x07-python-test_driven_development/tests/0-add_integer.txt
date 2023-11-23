@@ -1,0 +1,64 @@
+==================
+ 0-add_integer.py
+==================
+
+This module defines the function, ``add_integer(a, b=98)``,
+which adds two integers
+
+Numbers
+=======
+
+``add_integer(...)`` returns the addition of its arguments.  For numbers,
+that value is equivalent to using the ``+`` operator.
+
+::
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(4, 6)
+    10
+
+::
+    >>> add_integer(2, -8)
+    -6
+
+``add_integer(...)`` also works with floating-point values.
+Floats are cast to integers before they are added
+
+::
+    >>> add_integer(3.59, 0.9)
+    3
+
+Test with division by zero will fail
+::
+    >>> add_integer(5, 8 / 0)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
+
+::
+    >>> add_integer(6 / 0, 8)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
+
+::
+    >>> add_integer(6 / 0, 8 / 0)
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
+
+Non-numbers
+===========
+``add_integer(...)`` only takes integers and floats as arguments.
+If any of the arguments passed is a non-integer and non-float, a TypeError is raised.
+
+::
+    >>> add_integer("3", 7)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+::
+    >>> add_integer(9, "5 / 0")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
