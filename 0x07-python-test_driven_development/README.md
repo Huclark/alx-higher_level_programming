@@ -1,5 +1,5 @@
 # 0x07. Python - Test-driven development
-![alt text](https://github.com/Huclark/memes/blob/main/python%20unit%20tests.png?raw=true)
+![](https://github.com/Huclark/memes/blob/main/python%20unit%20tests.png?raw=true)
 
 ## Table of Contents
 - [About](#about)
