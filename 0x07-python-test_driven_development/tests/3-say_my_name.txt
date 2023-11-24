@@ -1,0 +1,78 @@
+=================
+3-say_my_name.txt
+=================
+
+This module defines the function, ``say_my_name(first_name, last_name="")``,
+which prints "My name is <first_name> <last_name>", where <first_name> is the
+first name of the person and <last_name> is the last name of the person.
+
+Valid string
+============
+
+The function only takes strings as arguments and raises a TypeError if the an
+argument passed to the function is not a str data type.
+
+::
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("  Huclark   ", "          Legend")
+    My name is Huclark Legend
+
+Only one argument is passed
+---------------------------
+
+If only one argument is passed the function sets the second argument
+as an empty string by default.
+
+::
+    >>> say_my_name("Huclark        ")
+    My name is Huclark 
+
+Empty string
+------------
+
+The function handles the case where the first argument is an empty string
+by raising a ValueError.
+
+::
+    >>> say_my_name("", "Huclark")
+    Traceback (most recent call last):
+        ...
+    ValueError: first_name can't be empty string
+
+If only the second argument is an empty string, the function still works
+
+::
+    >>> say_my_name("Huclark", "")
+    My name is Huclark 
+
+If both strings are empty, the function raises a ValueError
+
+::
+    >>> say_my_name("", "")
+    Traceback (most recent call last):
+        ...
+    ValueError: first_name can't be empty string
+
+Invalid strings
+===============
+
+The function raises a TypeError where a non-str data type is passed as an
+argument
+
+::
+    >>> say_my_name("Huclark", None)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+::
+    >>> say_my_name("Huclark", True)
+    Traceback (most recent call last):
+        ...
+    TypeError: last_name must be a string
+
+::
+    >>> say_my_name(90, "Legend")
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
