@@ -1,5 +1,5 @@
 # Higher Level Programming
-![alt text](https://pbs.twimg.com/profile_images/1598046444467982352/zgotfroP_400x400.jpg)
+![alt text](https://github.com/Huclark/memes/blob/main/alxlogo.jpg?raw=true)
 
 ## Table of Contents
 - [About](#about)
