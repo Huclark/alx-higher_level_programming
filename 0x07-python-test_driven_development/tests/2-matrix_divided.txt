@@ -10,7 +10,7 @@ Numbers
 =======
 
 ``matrix_divided(...)`` returns a new matrix where each element is the
-result of diving the corresponding element in the original matrix by the
+result of dividing the corresponding element in the original matrix by the
 specified divisor. 
 
 Integer division
