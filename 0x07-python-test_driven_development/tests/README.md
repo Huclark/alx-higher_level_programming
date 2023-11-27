@@ -10,3 +10,4 @@ Below are all test files and their purposes:
 | `0-add_integer.txt` | Tests the `add_integer()` function |
 | `2-matrix_divided.txt` | Tests the `matrix_divided()` function |
 | `3-say_my_name.txt` | Tests the `say_my_name.py()` function |
+| `4-print_square.txt`
