@@ -28,6 +28,7 @@ Floats are cast to integers before they are added
     3
 
 Test with division by zero will fail
+
 ::
     >>> add_integer(5, 8 / 0)
     Traceback (most recent call last):
