@@ -12,4 +12,4 @@ Below are all test files and their purposes:
 | `3-say_my_name.txt` | Tests the `say_my_name.py()` function |
 | `4-print_square.txt` | Tests the `print_square()` function |
 | `5-text_indentation.txt` | Tests the `text_indentation()` function |
-| `6-max_integer_test.py`  | Tests the `6-max_integer()` function  |
+| `6-max_integer_test.py`  | Tests the `max_integer()` function  |

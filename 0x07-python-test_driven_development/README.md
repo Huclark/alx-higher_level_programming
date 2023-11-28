@@ -3,7 +3,7 @@
 
 ## Table of Contents
 - [About](#about)
-- [Objective](#objective)
+- [Objectives](#objectives)
 - [Requirements](#requirements)
     - [Python Scripts](#python-scripts)
     - [Python Test Cases](#python-test-cases)
