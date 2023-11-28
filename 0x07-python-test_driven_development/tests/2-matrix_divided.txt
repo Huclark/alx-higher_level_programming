@@ -3,7 +3,7 @@
 =====================
 
 This module defines the function, ``matrix_divided(matrix, div)``,
-which diivides all elements of a matrix by a specified number (div)
+which divides all elements of a matrix by a specified number (div)
 
 
 Numbers

@@ -1,0 +1,54 @@
+==================
+4-print_square.txt
+==================
+
+This module defines the function, ``print_square(size)``, which
+prints a square with the character "#", where size is the size length of
+the square.
+
+Usage
+=====
+
+Where size is a positive integer or 0 it prints a rectangle using the #
+character.
+
+::
+    >>> print_square = __import__('4-print_square').print_square
+    >>> print_square(3)
+    ###
+    ###
+    ###
+
+::
+    >>> print_square(0)
+
+
+Size must be an integer, otherwise a TypeError will be raised.
+
+::
+    >>> print_square(8.5)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+::
+    >>> print_square(True)
+    Traceback (most recent call last):
+       ...
+    TypeError: size must be an integer
+
+If size is a float and less than 0 a TypeError will be raised
+
+::
+    >>> print_square(-3.9)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+If size is a negative integer, a ValueError will be raised
+
+::
+    >>> print_square(-5)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0

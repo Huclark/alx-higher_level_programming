@@ -37,7 +37,7 @@ by raising a ValueError.
     >>> say_my_name("", "Huclark")
     Traceback (most recent call last):
         ...
-    ValueError: first_name can't be empty string
+    ValueError
 
 If only the second argument is an empty string, the function still works
 
@@ -51,7 +51,7 @@ If both strings are empty, the function raises a ValueError
     >>> say_my_name("", "")
     Traceback (most recent call last):
         ...
-    ValueError: first_name can't be empty string
+    ValueError
 
 Invalid strings
 ===============
