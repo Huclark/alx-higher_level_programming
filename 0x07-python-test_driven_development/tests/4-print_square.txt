@@ -9,7 +9,7 @@ the square.
 Usage
 =====
 
-Where size is a positive integer or 0 it prints a rectangle using the #
+Where size is a positive integer or 0, it prints a rectangle using the #
 character.
 
 ::
