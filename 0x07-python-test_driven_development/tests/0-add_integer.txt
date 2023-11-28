@@ -63,3 +63,15 @@ If any of the arguments passed is a non-integer and non-float, a TypeError is ra
     Traceback (most recent call last):
         ...
     TypeError: b must be an integer
+
+::
+    >>> add_integer(True, 8)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+::
+    >>> add_integer(45, False)
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
