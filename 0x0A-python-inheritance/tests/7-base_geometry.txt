@@ -1,0 +1,86 @@
+==============
+7-base_geometry.txt
+==============
+
+This module defines the class, ``BaseGeometry``, with the following methods:
+
+1. ``area(self)``
+2. ``integer_validator(self, name, value)``
+
+Usage
+=====
+
+Import the class from the module
+----------------------------
+
+::
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Checking for module docstring
+-----------------------------
+
+::
+    >>> m = __import__("7-base_geometry").__doc__
+    >>> len(m) > 1
+    True
+
+Checking for class docstring
+----------------------------
+
+::
+    >>> c = __import__("7-base_geometry").BaseGeometry.__doc__
+    >>> len(c) > 1
+    True
+
+Checking for method docstring
+-----------------------------
+
+::
+    >>> f1 = __import__("7-base_geometry").BaseGeometry.area.__doc__
+    >>> len(f1) > 1
+    True
+
+::
+    >>> f2 = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+    >>> len(f2) > 1
+    True
+
+Test cases
+----------
+
+Creating an instance of BaseGeometry
+------------------------------------
+
+::
+    >>> bg = BaseGeometry()
+
+Checking valid integer values
+------------------------------
+
+::
+    >>> bg.integer_validator("my_int", 12)
+    >>> bg.integer_validator("width", 89)
+
+Checking invalid integer values
+--------------------------------
+
+::
+    >>> try:
+    ...     bg.integer_validator("name", "John")
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [TypeError] name must be an integer
+
+::
+    >>> try:
+    ...     bg.integer_validator("age", 0)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [ValueError] age must be greater than 0
+
+::
+    >>> try:
+    ...     bg.integer_validator("distance", -4)
+    ... except Exception as e:
+    ...     print("[{}] {}".format(e.__class__.__name__, e))
+    [ValueError] distance must be greater than 0
