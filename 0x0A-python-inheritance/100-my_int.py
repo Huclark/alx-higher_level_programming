@@ -1,21 +1,15 @@
-#!/urs/bin/python3
-"""Demonstrates the MyInt subclass
-"""
+#!/usr/bin/python3
+"""Defines a class MyInt that inherits from int."""
 
 
 class MyInt(int):
-    """Creating a child class of the built-in int
-    class
+    """Invert int operators == and !=."""
 
-    Args:
-        int (int): The built-in int class
-    """
     def __eq__(self, value):
-        """Inverts the == operator to !=
-        """
+        """Override == opeartor with != behavior."""
+        # The self.real attribute represents the actual integer value of the MyInt object.
         return self.real != value
 
     def __ne__(self, value):
-        """Inveryts the != operator to ==
-        """
+        """Override != operator with == behavior."""
         return self.real == value
