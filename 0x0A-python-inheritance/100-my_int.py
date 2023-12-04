@@ -10,10 +10,12 @@ class MyInt(int):
     Args:
         int (int): The built-in int class
     """
-    def __eq__(self, other):
+    def __eq__(self, value):
         """Inverts the == operator to !=
         """
-        return super().__ne__(other)
+        return self.real != value
 
-    def __ne__(self, other):
-        return super().__eq__(other)
+    def __ne__(self, value):
+        """Inveryts the != operator to ==
+        """
+        return self.real == value
