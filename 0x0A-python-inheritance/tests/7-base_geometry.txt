@@ -1,6 +1,6 @@
-==============
+===================
 7-base_geometry.txt
-==============
+===================
 
 This module defines the class, ``BaseGeometry``, with the following methods:
 
