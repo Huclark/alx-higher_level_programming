@@ -7,7 +7,6 @@ class MyInt(int):
 
     def __eq__(self, value):
         """Override == opeartor with != behavior."""
-        # The self.real attribute represents the actual integer value of the MyInt object.
         return self.real != value
 
     def __ne__(self, value):
