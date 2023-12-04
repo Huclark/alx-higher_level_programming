@@ -1,0 +1,41 @@
+==============
+1-my_list.txt
+==============
+
+This module defines the class, ``MyList``, which inherits from the built-in list class.
+
+Usage
+=====
+
+A new instance of MyList is created and elements are appended.
+The list is printed and then sorted using the ``print_sorted`` method.
+
+::
+
+    >>> MyList = __import__('1-my_list').MyList
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(4)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+    >>> my_list.print_sorted()
+    [1, 2, 3, 4, 5]
+    >>> print(my_list)
+    [1, 4, 2, 3, 5]
+
+Invalid method usage
+====================
+
+Attempting to use ``print_sorted`` on an object which does not belong to ``MyList``
+results in an AttributeError.
+
+::
+
+    >>> non_list = [1, 4, 2, 3, 5]
+    >>> non_list.print_sorted()
+    Traceback (most recent call last):
+        ...
+    AttributeError: 'list' object has no attribute 'print_sorted'
