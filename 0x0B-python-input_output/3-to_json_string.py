@@ -5,6 +5,7 @@
 
 import json
 
+
 def to_json_string(my_obj):
     """Returns an object(python data structure) represented
     by a JSON string
