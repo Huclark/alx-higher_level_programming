@@ -19,5 +19,5 @@ def append_write(filename="", text=""):
     try:
         with open(filename, "a", encoding="utf-8") as file:
             return file.write(text)
-    except OSError as e:
+    except:
         return 0
