@@ -15,6 +15,6 @@ def append_write(filename="", text=""):
         int: Number of characters written to file
     """
     if not filename:
-        return 0 # return immediately if string is empty
+        return 0  # return immediately if string is empty
     with open(filename, "a", encoding="utf-8") as file:
         return file.write(text)
