@@ -65,6 +65,7 @@ def print_dict_sorted_nonzero(status_codes):
     print('\n'.join(["{:d}: {:d}".format(k, status_codes[k])
                      for k in sorted_keys if status_codes[k] != 0]))
 
+
 if __name__ == "__main__":
     import sys
 
