@@ -1,4 +1,4 @@
-# 0x0A. Python - Inheritance
+# 0x0B. Python - Input/Output
 
 <a href="https://github.com/Huclark/memes"><img src="https://github.com/Huclark/memes/blob/main/python%20files%20meme.png?raw=true"></a>
 

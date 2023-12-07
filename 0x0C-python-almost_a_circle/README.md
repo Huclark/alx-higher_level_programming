@@ -1,4 +1,5 @@
-# 0x0A. Python - Inheritance
+# 0x0C. Python - Almost a circle
+
 
 <a href="https://github.com/Huclark/memes"><img src="https://github.com/Huclark/memes/blob/main/I%20just%20keep%20googling.png?raw=true"></a>
 
