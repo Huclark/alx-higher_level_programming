@@ -4,5 +4,7 @@
 
 -- Select the values to display
 SELECT score, name
--- Order the scores by highest score first
-FROM second_table ORDER BY score DESC;
+-- Select the table to retrieve data from
+FROM second_table
+-- Order the results in descending order on the 'score' column
+ORDER BY score DESC;
