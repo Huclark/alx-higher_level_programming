@@ -5,7 +5,7 @@
 -- Field name in first_table
 
 -- Switch to the 'hbtn_0c_0' database
-USE 'hbtn_0c_0'
+USE 'hbtn_0c_0';
 -- Begin ALTERTABLE statement to modify the 'first_table' table
 ALTER TABLE 'first_table'
 -- Specify the new character set for the table as utf8mb4
