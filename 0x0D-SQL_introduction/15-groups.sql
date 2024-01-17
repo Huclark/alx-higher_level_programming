@@ -7,5 +7,7 @@ SELECT score
 COUNT(*) as number
 -- Specify the table from which to retrieve data
 FROM second_table
+-- Group the results by the score column
+GROUP BY score
 -- Order the results in descending order
-GROUP BY score ORDER BY number DESC;
+ORDER BY number DESC;
