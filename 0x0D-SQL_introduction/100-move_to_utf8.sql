@@ -7,7 +7,7 @@
 -- Switch to the 'hbtn_0c_0' database
 USE `hbtn_0c_0`
 -- Begin ALTERTABLE statement to modify the 'first_table' table
-ALTER TABLE 'first_table'
+ALTER TABLE `first_table`
 -- Specify the new character set for the table as utf8mb4
 CONVERT TO CHARACTER SET utf8bm4
 -- Specify the new collation for the table as 'utf8mb4_unicode_ci'
