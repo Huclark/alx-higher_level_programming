@@ -2,7 +2,7 @@
 -- in the table second_table of the database hbtn_0c_0
 
 -- Select the score column
-SELECT score
+SELECT score,
 -- Count number of occurences of each score and assign value to number column
 COUNT(*) as number
 -- Specify the table from which to retrieve data
