@@ -10,7 +10,7 @@ if (argvLength <= 3) {
   let biggestNumber = parseInt(process.argv[2]);
   let secondBiggest = biggestNumber;
   let currentNumber;
-  let index = 0;
+  let index = 2;
 
   while (index < argvLength) {
     currentNumber = parseInt(process.argv[index]);
