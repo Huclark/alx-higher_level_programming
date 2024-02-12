@@ -7,21 +7,7 @@ const argvLength = process.argv.length;
 if (argvLength <= 3) {
   console.log('0');
 } else {
-  let biggestNumber = parseInt(process.argv[2]);
-  let secondBiggest = biggestNumber;
-  let currentNumber;
-  let index = 2;
-
-  while (index < argvLength) {
-    currentNumber = parseInt(process.argv[index]);
-    if (biggestNumber < currentNumber) {
-      secondBiggest = biggestNumber;
-      biggestNumber = currentNumber;
-    }
-    if (currentNumber > secondBiggest && currentNumber < biggestNumber) {
-      secondBiggest = currentNumber;
-    }
-    index++;
-  }
-  console.log(`${secondBiggest}`);
+  const array = process.argv.slice(2, argvLength);
+  array.sort((a, b) => b - a);
+  console.log(array[1]);
 }
