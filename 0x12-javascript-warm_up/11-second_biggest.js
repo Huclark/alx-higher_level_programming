@@ -5,7 +5,7 @@
  */
 const argvLength = process.argv.length;
 if (argvLength <= 3) {
-  console.log("0");
+  console.log('0');
 } else {
   let biggestNumber = parseInt(process.argv[2]);
   let secondBiggest = biggestNumber;
