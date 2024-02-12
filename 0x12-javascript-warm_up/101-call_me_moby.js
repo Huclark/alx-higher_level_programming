@@ -2,8 +2,8 @@
 /**
  * This function executes x times a function
  */
-exports.callMeMoby = function (x, func) {
+exports.callMeMoby = function (x, theFunction) {
   for (let i = 0; i < x; i++) {
-    func();
+    theFunction();
   }
 };
