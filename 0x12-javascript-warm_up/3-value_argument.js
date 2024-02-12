@@ -6,6 +6,4 @@
  */
 !process.argv[2]
   ? console.log('No argument')
-  : process.argv.slice(2).forEach((argument) => {
-    console.log(argument);
-  });
+  : console.log(process.argv[2]);
