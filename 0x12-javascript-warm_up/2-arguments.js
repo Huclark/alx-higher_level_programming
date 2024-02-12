@@ -7,7 +7,6 @@
  * If only one argument is passed to the script, it prints "Argument found"
  * Otherwise it prints "Arguments found"
  */
-
 process.argv.length < 3
   ? console.log('No argument')
   : process.argv.length === 3
