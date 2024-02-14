@@ -16,7 +16,7 @@ try {
   // read from second source file synchronously
   const dataB = fs.readFileSync(fileB, 'utf8');
   // write into destination file synchronously
-  fs.writeFileSync(fileC, dataA + dataB)
+  fs.writeFileSync(fileC, dataA + dataB);
 } catch (err) {
   console.error(err);
 }
