@@ -10,25 +10,13 @@
 const fs = require('fs');
 const [fileA, fileB, fileC] = process.argv.slice(2);
 
-// read from first source file
-fs.readFile(fileA, 'utf8', (err, dataA) => {
-  if (err) {
-    console.error(err);
-    return;
-  }
-  // read from second source file
-  fs.readFile(fileB, 'utf8', (err, dataB) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    // data to write into destination file
-    const content = `${dataA}${dataB}`;
-    // writing into destination file
-    fs.writeFile(fileC, content, err => {
-      if (err) {
-        console.error(err);
-      }
-    });
-  });
-});
+try {
+  // read from first source file synchronously
+  const dataA = fs.readFileSync(fileA, 'utf8');
+  // read from second source file synchronously
+  const dataB = fs.readFileSync(fileB, 'utf8');
+  // write into destination file synchronously
+  fs.writeFileSync(fileC, dataA + dataB)
+} catch (err) {
+  console.error(err);
+}
