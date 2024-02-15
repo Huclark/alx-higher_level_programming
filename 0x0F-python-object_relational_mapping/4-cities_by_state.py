@@ -14,7 +14,11 @@ def list_all_cities(username, password, database):
         database (str): Database name
     """
     db = MySQLdb.connect(
-        host="localhost", user=username, password=password, database=database, port=3306
+        host="localhost",
+        user=username,
+        password=password,
+        database=database,
+        port=3306
     )
     cursor = db.cursor()
     cursor.execute(
