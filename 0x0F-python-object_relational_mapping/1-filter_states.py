@@ -32,7 +32,7 @@ def list_states(username, password, database):
 
 if __name__ == "__main__":
     if len(argv) != 4:
-        print("Usage: ./0-select_states.py <username> <password> <database>")
+        print("Usage: <script> <username> <password> <database>")
         exit(1)
     # execute function
     list_states(argv[1], argv[2], argv[3])
