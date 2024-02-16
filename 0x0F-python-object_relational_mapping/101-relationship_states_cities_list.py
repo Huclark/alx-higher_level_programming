@@ -1,18 +1,18 @@
 #!/usr/bin/python3
-"""This script  creates the State “California” with the
-City “San Francisco” from the database hbtn_0e_100_usa
+"""This script lists all State objects, and corresponding City objects,
+contained in the database hbtn_0e_101_usa
 """
 from sys import argv
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from relationship_city import City, Base
+from relationship_city import Base
 from relationship_state import State
 
 
-def create_state(username, password, database):
-    """Creates the State “California” with the
-    City “San Francisco” from the database hbtn_0e_100_usa
+def states_and_cities(username, password, database):
+    """Lists all State objects, and corresponding City objects,
+    contained in the database hbtn_0e_101_usa
 
     Args:
         username (str): Username
@@ -31,15 +31,11 @@ def create_state(username, password, database):
     session_maker = sessionmaker(bind=engine)
 
     with session_maker() as session:
-        # create Carlifornia state and San Francisco city
-        state = State(name="California")
-        city = City(name="San Francisco", state=state)
-        session.add(city)
-        session.commit()
-
-        # alternate is to append to states
-        # state = State(name="California")
-        # state.cities.append(City(name="San Fransisco"))
+        states = session.query(State).order_by(State.id).all()
+        for state in states:
+            print("{}: {}".format(state.id, state.name))
+            for city in state.cities:
+                print("\t{}: {}".format(city.id, city.name))
 
 
 if __name__ == "__main__":
@@ -47,4 +43,4 @@ if __name__ == "__main__":
         print("Usage: <script> <username> <password> <database> <state name>")
         sys.exit(1)
     # execute function
-    create_state(argv[1], argv[2], argv[3])
+    states_and_cities(argv[1], argv[2], argv[3])
