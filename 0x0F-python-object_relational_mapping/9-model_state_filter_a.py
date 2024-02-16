@@ -9,7 +9,7 @@ from sqlalchemy.orm import sessionmaker
 from model_state import State
 
 
-def first_state(username, password, database):
+def a_states(username, password, database):
     """Displays all states that contains letter 'a'
     Args:
         username (str): Username
@@ -38,4 +38,4 @@ if __name__ == "__main__":
         print("Usage: <script> <username> <password> <database>")
         sys.exit(1)
     # execute function
-    first_state(argv[1], argv[2], argv[3])
+    a_states(argv[1], argv[2], argv[3])
