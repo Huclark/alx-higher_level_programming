@@ -3,6 +3,7 @@
 N from the hbtn_0e_0_usa
 """
 from sys import argv
+import sys
 import MySQLdb
 
 
@@ -25,7 +26,6 @@ def list_states(username, password, database, state_name):
     cursor = db.cursor()
     cursor.execute(f"""SELECT * FROM states
                    WHERE name LIKE BINARY '{state_name}'
-                   ORDER BY states.id ASC
                    """
                    )
     states = cursor.fetchall()
@@ -38,6 +38,6 @@ def list_states(username, password, database, state_name):
 if __name__ == "__main__":
     if len(argv) != 5:
         print("Usage: <script> <username> <password> <database> <state name>")
-        exit(1)
+        sys.exit(1)
     # execute function
     list_states(argv[1], argv[2], argv[3], argv[4])
