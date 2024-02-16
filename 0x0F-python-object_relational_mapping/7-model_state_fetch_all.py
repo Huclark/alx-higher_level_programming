@@ -29,7 +29,7 @@ def list_all_states(username, password, database):
     with session_maker() as session:
         for state in session.query(State).order_by(State.id):
             print("{}: {}".format(state.id, state.name))
-            
+
     # alternate approach
     # session = session_maker()
     # query the database
