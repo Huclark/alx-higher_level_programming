@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-"""This script changes the name of a State object
-from the database hbtn_0e_6_usa
+"""This script prints all City objects from the
+database hbtn_0e_14_usa
 """
 from sys import argv
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import State
+from model_state import Base, State
+from model_city import City
 
 
-def update_state(username, password, database):
-    """changes the name of a State object
-    from the database
+def all_cities(username, password, database):
+    """Prints all City objects from the database hbtn_0e_14_usa
 
     Args:
         username (str): Username
@@ -28,11 +28,14 @@ def update_state(username, password, database):
     session_maker = sessionmaker(bind=engine)
 
     with session_maker() as session:
-        state = session.query(State).filter_by(id=2).first()
-        if state:
-            state.name = "New Mexico"
-            # commit the session
-            session.commit()
+        # query the database
+        # cities = session.query(City).order_by(City.id).all()
+        # for city in cities:
+        #     state = session.query(State).filter_by(id=city.state_id).first()
+        #     print("{}: ({}) {}".format(state.name, city.id, city.name))
+        cities = session.query(City).join(State).order_by(City.id).all()
+        for city in cities:
+            print("{}: ({}) {}".format(city.state.name, city.id, city.name))
 
 
 if __name__ == "__main__":
@@ -40,4 +43,4 @@ if __name__ == "__main__":
         print("Usage: <script> <username> <password> <database> <state name>")
         sys.exit(1)
     # execute function
-    update_state(argv[1], argv[2], argv[3])
+    all_cities(argv[1], argv[2], argv[3])
