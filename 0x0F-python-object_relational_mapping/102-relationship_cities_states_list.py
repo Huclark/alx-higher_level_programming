@@ -1,18 +1,16 @@
 #!/usr/bin/python3
-"""This script lists all State objects, and corresponding City objects,
-contained in the database hbtn_0e_101_usa
+"""This script lists all City objects from the database hbtn_0e_101_usa
 """
 from sys import argv
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from relationship_city import Base
+from relationship_city import Base, City
 from relationship_state import State
 
 
-def states_and_cities(username, password, database):
-    """Lists all State objects, and corresponding City objects,
-    contained in the database hbtn_0e_101_usa
+def all_cities(username, password, database):
+    """Lists all City objects from the database hbtn_0e_101_usa
 
     Args:
         username (str): Username
@@ -29,11 +27,16 @@ def states_and_cities(username, password, database):
     session_maker = sessionmaker(bind=engine)
 
     with session_maker() as session:
-        states = session.query(State).order_by(State.id).all()
-        for state in states:
-            print("{}: {}".format(state.id, state.name))
-            for city in state.cities:
-                print("\t{}: {}".format(city.id, city.name))
+        # This works:
+        # states = session.query(State).join(City).order_by(City.id).all()
+        # for state in states:
+        #     for city in state.cities:
+        #         print("{}: {} -> {}".format(city.id, city.name, state.name))
+
+        # but this is concise:
+        cities = session.query(City).order_by(City.id).all()
+        for city in cities:
+            print("{}: {} -> {}".format(city.id, city.name, city.state.name))
 
 
 if __name__ == "__main__":
@@ -41,4 +44,4 @@ if __name__ == "__main__":
         print("Usage: <script> <username> <password> <database> <state name>")
         sys.exit(1)
     # execute function
-    states_and_cities(argv[1], argv[2], argv[3])
+    all_cities(argv[1], argv[2], argv[3])
