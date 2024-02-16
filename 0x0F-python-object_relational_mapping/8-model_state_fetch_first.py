@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This script lists all State objects from the
+"""This script prints the first State from the
 database hbtn_0e_6_usa
 """
 from sys import argv
@@ -9,9 +9,8 @@ from sqlalchemy.orm import sessionmaker
 from model_state import State, Base
 
 
-def list_all_states(username, password, database):
-    """Displays all states in a database
-
+def first_state(username, password, database):
+    """Displays the first State from a database
     Args:
         username (str): Username
         password (str): User's password
@@ -27,16 +26,12 @@ def list_all_states(username, password, database):
     session_maker = sessionmaker(bind=engine)
 
     with session_maker() as session:
-        for state in session.query(State).order_by(State.id):
+        # query the database
+        state = session.query(State).order_by(State.id).first()
+        if state:
             print("{}: {}".format(state.id, state.name))
-            
-    # alternate approach
-    # session = session_maker()
-    # query the database
-    # for state in session.query(State).order_by(State.id):
-    #     print("{}: {}".format(state.id, state.name))
-    # close session
-    # session.close()
+        else:
+            print("Nothing")
 
 
 if __name__ == "__main__":
@@ -44,4 +39,4 @@ if __name__ == "__main__":
         print("Usage: <script> <username> <password> <database>")
         sys.exit(1)
     # execute function
-    list_all_states(argv[1], argv[2], argv[3])
+    first_state(argv[1], argv[2], argv[3])
