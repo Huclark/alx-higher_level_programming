@@ -25,6 +25,7 @@ def list_states(username, password, database, state_name):
     cursor = db.cursor()
     cursor.execute(f"""SELECT * FROM states
                    WHERE name LIKE BINARY '{state_name}'
+                   ORDER BY states.id ASC
                    """
                    )
     states = cursor.fetchall()
