@@ -23,7 +23,10 @@ def list_states(username, password, database, state_name):
         port=3306
     )
     cursor = db.cursor()
-    cursor.execute(f"SELECT * FROM states WHERE name = '{state_name}'")
+    cursor.execute(f"""SELECT * FROM states
+                   WHERE name LIKE BINARY '{state_name}'
+                   """
+                   )
     states = cursor.fetchall()
     for state in states:
         print(state)
