@@ -3,14 +3,12 @@
 # displays the value of the X-Request-Id variable found in the header
 # of the response.
 
-from urllib.request import Request, urlopen
-from urllib.error import URLError
+from urllib import request
 from sys import argv
 
-req = Request(argv[1])
+def x_request_id(args):
+    with request.urlopen(args) as response:
+        print(dict(response.headers).get('X-Request-Id'))
 
-try:
-    with urlopen(req) as response:
-        print(response.getheader('X-Request-Id'))
-except (URLError, ValueError, TypeError):
-    pass
+if __name__ == "__main__":
+    x_request_id(argv[1])
