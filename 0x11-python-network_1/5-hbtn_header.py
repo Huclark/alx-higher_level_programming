@@ -12,7 +12,7 @@ def x_request_id():
     variable X-Rquest-Id in the response header
     """
     response = get(argv[1])
-    print(response.headers['X-Request-Id'])
+    print(response.headers.get('X-Request-Id'))
 
 
 if __name__ == "__main__":
