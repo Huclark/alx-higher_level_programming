@@ -2,10 +2,15 @@
 # This script takes in a URL, sends a request to the URL and
 # displays the value of the X-Request-Id variable found in the header
 # of the response.
+
 from urllib.request import Request, urlopen
+from urllib.error import URLError
 from sys import argv
 
 req = Request(argv[1])
 
-with urlopen(req) as response:
-    print(response.getheader('X-Request-Id'))
+try:
+    with urlopen(req) as response:
+        print(response.getheader('X-Request-Id'))
+except (URLError, ValueError, TypeError):
+    pass
