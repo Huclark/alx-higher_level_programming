@@ -8,6 +8,12 @@ from sys import argv
 
 
 def x_request_id(args):
+    """Sends a request to the URL and displays the value of the
+    X-Request-Id variable found in the header of the response
+
+    Args:
+        args (str): url
+    """
     with request.urlopen(args) as response:
         print(dict(response.headers).get('X-Request-Id'))
 

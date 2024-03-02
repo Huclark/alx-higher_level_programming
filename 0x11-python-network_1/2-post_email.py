@@ -10,6 +10,9 @@ from urllib.request import urlopen
 
 
 def post_email():
+    """Sends a POST request to a URL with the email as a parameter
+    and displays the body of the response (decoded in utf-8)
+    """
     data = {}
     data['email'] = argv[2]
 
