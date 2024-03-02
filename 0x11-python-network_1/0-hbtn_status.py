@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-# This script fetches https://alx-intranet.hbtn.io/status
+"""This script fetches https://alx-intranet.hbtn.io/status
+"""
 from urllib.request import Request, urlopen
 
 req = Request('https://alx-intranet.hbtn.io/status')
