@@ -9,7 +9,7 @@ from requests import get
 def print_body():
     """Prints the body of the http response
     """
-    response = get(argv[1])
+    response = get(argv[1], timeout=60)
 
     if response.status_code >= 400:
         print(f"Error code: {response.status_code}")

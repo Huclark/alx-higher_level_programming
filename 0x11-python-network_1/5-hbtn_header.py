@@ -11,7 +11,7 @@ def x_request_id():
     """Sends a request to a url and displays the value of the
     variable X-Rquest-Id in the response header
     """
-    response = get(argv[1])
+    response = get(argv[1], timeout=60)
     print(response.headers.get('X-Request-Id'))
 
 

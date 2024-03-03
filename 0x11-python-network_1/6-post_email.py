@@ -13,7 +13,7 @@ def post_email():
     and displays the body of the response (decoded in utf-8)
     """
     data = {"email": argv[2]}
-    response = post(argv[1], data=data)
+    response = post(argv[1], data=data, timeout=60)
     print(response.text)
 
 

@@ -2,7 +2,7 @@
 """This script fetches https://alx-intranet.hbtn.io/status"""
 import requests
 
-request = requests.get('https://alx-intranet.hbtn.io/status')
+request = requests.get('https://alx-intranet.hbtn.io/status', timeout=60)
 
 print(
     "Body response:" +
