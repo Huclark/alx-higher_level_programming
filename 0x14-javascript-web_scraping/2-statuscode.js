@@ -5,7 +5,7 @@
 const request = require('request');
 
 // Send a GET request to the provided URL
-request(process.argv[2], (error, response) => {
+request.get(process.argv[2], (error, response) => {
   if (error) {
     console.error(error);
   } else {
